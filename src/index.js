@@ -12,12 +12,13 @@ const animals = [
  * change the content of the map function
  **/
 const animalsInHTML = animals.map((singleAnimal, i) => {
-  return <li>hello</li>;
+  return <li key={i}>{singleAnimal.label}</li>;
 });
-const container = document.getElementById('root');
+console.log(animalsInHTML);
+const container = document.getElementById("root");
 
 // create a root
 const root = ReactDOM.createRoot(container);
 
 //render app to root
-root.render(animalsInHTML)
+root.render(animalsInHTML);
